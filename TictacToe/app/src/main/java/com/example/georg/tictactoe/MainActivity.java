@@ -143,8 +143,7 @@ public class MainActivity extends AppCompatActivity {
             if(winner==1)
             {
                 Toast.makeText(getApplicationContext(),"Player 1 is the winner",Toast.LENGTH_LONG).show();
-
-
+                AutoPlay();
             }
             else if(winner==2)
             {
@@ -166,7 +165,45 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         Random r = new Random();
+        int RandIndex = r.nextInt(EmptyCells.size()-0)+0;
+        int CellID = EmptyCells.get(RandIndex);
+        Button buSelected;
       //  Rand
+        switch (CellID)
+        {
+            case 1:
+               // CellID=1;
+                buSelected = (Button) findViewById(R.id.bu1);
+                break;
+            case 2:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 3:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 4:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 5:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 6:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 7:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 8:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            case 9:
+                buSelected = (Button) findViewById(R.id.bu2);
+                break;
+            default:
+                buSelected = (Button) findViewById(R.id.bu1);
+                break;
+        }
+        Playgame(CellID,buSelected);
     }
 
 }
