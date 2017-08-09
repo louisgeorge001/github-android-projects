@@ -12,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button4 = (Button) findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Hello World!",Toast.LENGTH_LONG).show();
-            }
-        });
+//        button4 = (Button) findViewById(R.id.button4);
+//        button4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(),"Hello World!",Toast.LENGTH_LONG).show();
+//            }
+//        });
     }
     }
