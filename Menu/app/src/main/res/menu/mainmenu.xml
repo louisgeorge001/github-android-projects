@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/searchbar"
+        android:icon="@drawable/search_glass_icon"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+    <item
+        android:id="@+id/Add"
+        android:icon="@drawable/addfriend_btn"
+        android:title="Add"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/Settings"
+        android:icon="@drawable/settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/home_icon"
+        android:title="Home"
+        app:showAsAction="ifRoom"
+         />
+</menu>
