@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Menu</string>
+    <string name="app_name">Localization</string>
+    <string name = "buhome">Home</string>
+    <string name = "welcome">Welcome</string>
+    <string name = "pargh">I do well in school, and people think I am smart because of it. But it’s not true. In fact, three years ago I struggled in school. However, two years ago I decided to get serious
+        about school and made a few changes. First, I decided I would become interested in whatever was being taught, regardless of what other people thought. I also decided I would work hard every day and
+        never give up on any assignment. I decided to never, never fall behind. Finally, I decided to make school a priority over friends and fun. After implementing these changes, I became an active
+        participant in classroom discussions. Then my test scores began to rise. I still remember the first time that someone made fun of me because “I was smart.” How exciting! It seems to me that being
+        smart is simply a matter of working hard and being interested. After all, learning a new video game is hard work even when you are interested. Unfortunately, learning a new video game doesn’t help
+        you get into college or get a good job.</string>
 </resources>

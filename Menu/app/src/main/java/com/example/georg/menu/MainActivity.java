@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -38,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         return true;
+    }
+    public void buClick(View view)
+    {
+        String mgs = getResources().getString(R.string.welcome);
+        Toast.makeText(getApplicationContext(),mgs,Toast.LENGTH_SHORT).show();
     }
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item){

@@ -6,14 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name = "android:navigationBarColor">@color/colorAccent</item>
-        
-    </style>
-    
-    <style name="buttonset">
-
-        <item name = "android:color">@color/colorAccent</item>
-        <item name = "android:alpha">0.5</item>
     </style>
 
 </resources>
