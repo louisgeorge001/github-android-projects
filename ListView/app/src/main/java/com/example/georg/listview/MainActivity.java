@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<AdapterItems>  listnewsData = new ArrayList<AdapterItems>();
     MyCustomAdapter myadapter;
+    Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addcomp();
+            }
+        });
+    }
+    public void addcomp()
+    {
+        listnewsData.add(new AdapterItems(1,"addedcomp","developanother"));
+        myadapter.notifyDataSetChanged();
     }
 
 
