@@ -17,5 +17,11 @@ public class SharedRef {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("uname",uname);
         editor.putString("pword",pword);
+        editor.commit();
+    }
+    public String loadData(){
+        String FileContent = "uname:"+sharedPreferences.getString("uname","No Name");
+        FileContent+="pword:"+sharedPreferences.getString("pword","No Name");
+        return FileContent;
     }
 }
