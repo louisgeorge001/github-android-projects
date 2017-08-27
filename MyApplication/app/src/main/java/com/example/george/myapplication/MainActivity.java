@@ -1,6 +1,7 @@
 package com.example.george.myapplication;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                loaddata();
             }
         });
     }
@@ -49,6 +50,19 @@ public class MainActivity extends AppCompatActivity {
     public void loaddata()
     {
         //String[] projections = {"user_name","user_password"};
+        Cursor cursor = Dbmanager.query(null,null,null,Dbmanager.user_name);
+        if(cursor.moveToFirst())
+        {
+            String tabledata = "";
+            do{
+                tabledata+="Username: "+cursor.getString(cursor.getColumnIndex(Dbmanager.user_name))+" Password: "+cursor.getString(cursor.getColumnIndex(Dbmanager.user_password))+" | ";
+            }while(cursor.moveToNext());
+            Toast.makeText(getApplicationContext(),tabledata,Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"No data!",Toast.LENGTH_SHORT).show();
+        }
 
     }
 
