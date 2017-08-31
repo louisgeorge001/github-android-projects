@@ -18,6 +18,7 @@ public class dbmanager {
     static final String tbname = "logins";
     static final String user_name = "user_name";
     static final String user_password = "user_password";
+    static final String colid = "ID";
     static final int db_version = 1;
     //create table
     static final String createtable = "CREATE TABLE IF NOT EXISTS "+tbname+
@@ -61,6 +62,11 @@ public class dbmanager {
         qb.setTables(tbname);
         Cursor cursor = qb.query(sqLiteDatabasee,projection,Selection,SelectionArgs,null,null,SortOrder);
         return cursor;
+    }
+    public int delete(String Selection,String[] SelectionArgs)
+    {
+        int count = sqLiteDatabasee.delete(tbname,Selection,SelectionArgs);
+        return count;
     }
 
 }
