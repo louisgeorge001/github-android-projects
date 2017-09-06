@@ -69,4 +69,11 @@ public class dbmanager {
         return count;
     }
 
+    public int Update(ContentValues contentValues,String Selection,String[] SelectionArgs)
+    {
+        int count = sqLiteDatabasee.update(tbname,contentValues,Selection,SelectionArgs);
+
+        return count;
+    }
+
 }
