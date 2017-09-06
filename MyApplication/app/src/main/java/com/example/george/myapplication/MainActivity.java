@@ -18,8 +18,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtuname,txtpass;
-    Button btnreg,btnlogin,btnload;
+    Button btnreg,btnlogin,btnload,butupdate;
     dbmanager Dbmanager;
+    int ID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             String tabledata = "";
             do{
                 //tabledata+="Username: "+cursor.getString(cursor.getColumnIndex(Dbmanager.user_name))+" Password: "+cursor.getString(cursor.getColumnIndex(Dbmanager.user_password))+" | ";
-                listnewsData.add(new Adapterclass(cursor.getString(cursor.getColumnIndex(Dbmanager.colid)),cursor.getString(cursor.getColumnIndex(Dbmanager.user_name)),cursor.getString(cursor.getColumnIndex(Dbmanager.user_password))));
+                listnewsData.add(new Adapterclass(cursor.getInt(cursor.getColumnIndex(Dbmanager.colid)),cursor.getString(cursor.getColumnIndex(Dbmanager.user_name)),cursor.getString(cursor.getColumnIndex(Dbmanager.user_password))));
             } while(cursor.moveToNext());
             Toast.makeText(getApplicationContext(),tabledata,Toast.LENGTH_SHORT).show();
         }
@@ -160,13 +161,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+            Button butupdate = (Button) myView.findViewById(R.id.butupdate);
+            butupdate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
+                    txtuname.setText(s.username);
+                    txtpass.setText(s.password);
+                }
+            });
             return myView;
         }
 
 
 
     }
+
 
 
 }

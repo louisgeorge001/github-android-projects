@@ -5,11 +5,11 @@ package com.example.george.myapplication;
  */
 
 public class Adapterclass {
-    public   String ID;
+    public   int ID;
     public  String username;
     public  String password;
     //for news details
-    Adapterclass( String ID, String username,String password)
+    Adapterclass( int ID, String username,String password)
     {
         this. ID=ID;
         this. username=username;

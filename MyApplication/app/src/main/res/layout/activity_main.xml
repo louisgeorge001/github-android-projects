@@ -42,7 +42,7 @@
         android:id="@+id/btnreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="17dp"
         android:text="Register Account"
         app:layout_constraintTop_toBottomOf="@+id/txtpass"
         android:layout_marginLeft="8dp"
@@ -50,7 +50,8 @@
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.198" />
 
     <Button
         android:id="@+id/btnlogin"
@@ -90,4 +91,20 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/bu_updatereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Update Record"
+        app:layout_constraintBottom_toTopOf="@+id/btnload"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintLeft_toRightOf="@+id/btnreg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpass"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
