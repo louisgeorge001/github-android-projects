@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtuname,txtpass;
-    Button btnreg,btnlogin,btnload,butupdate;
+    Button btnreg,btnlogin,btnload,butupdate,bu_updatereco;
     dbmanager Dbmanager;
     int ID;
     @Override
@@ -43,7 +43,23 @@ public class MainActivity extends AppCompatActivity {
                 loaddata();
             }
         });
+        bu_updatereco = (Button) findViewById(R.id.bu_updatereco);
+        bu_updatereco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updatedata();
+            }
+        });
 
+    }
+    public void updatedata()
+    {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Dbmanager.user_name,txtuname.getText().toString());
+        contentValues.put(Dbmanager.user_password,txtpass.getText().toString());
+        contentValues.put(Dbmanager.colid,ID);
+        String[] SelectionArgs = {txtuname.getText().toString()};
+        Dbmanager.Update(contentValues,"user_name=?",SelectionArgs);
     }
     void LoadElement()
     {
@@ -140,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             txtJobTitle.setText(s.username);
 
             TextView txtJobTitle1=( TextView)myView.findViewById(R.id.tv_id);
-            txtJobTitle1.setText(s.ID);
+            txtJobTitle1.setText(String.valueOf(s.ID));
 
             TextView txtJobTitle2=( TextView)myView.findViewById(R.id.tv_pass);
             txtJobTitle2.setText(s.password);
@@ -172,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
             });
             return myView;
         }
+
+
 
 
 
