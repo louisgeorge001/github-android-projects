@@ -10,11 +10,12 @@ import android.view.ViewGroup;
  * Created by george on 9/13/17.
  */
 
-public class fragment_regacc extends Fragment {
+public class fragment_2 extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registeraccount, container, false);
+        return inflater.inflate(R.layout.fragment_2, container, false);
     }
 }
