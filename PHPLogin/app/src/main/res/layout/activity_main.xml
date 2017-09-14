@@ -8,14 +8,14 @@
     tools:context="com.example.george.phplogin.MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtuname"
         android:layout_width="202dp"
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/txtpass"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="137dp"
         android:layout_marginRight="22dp"
@@ -34,7 +34,7 @@
         android:text="Username"
         app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/editText"
+        app:layout_constraintRight_toLeftOf="@+id/txtuname"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -42,7 +42,7 @@
         android:layout_marginStart="42dp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtpass"
         android:layout_width="193dp"
         android:layout_height="39dp"
         android:ems="10"
@@ -51,9 +51,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintBottom_toTopOf="@+id/bulogin"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/txtuname"
+        android:layout_alignLeft="@+id/txtuname"
+        android:layout_alignStart="@+id/txtuname"
         android:layout_marginTop="20dp" />
 
     <TextView
@@ -64,8 +64,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintBottom_toTopOf="@+id/bulogin"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignBaseline="@+id/txtpass"
+        android:layout_alignBottom="@+id/txtpass"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView" />
 
