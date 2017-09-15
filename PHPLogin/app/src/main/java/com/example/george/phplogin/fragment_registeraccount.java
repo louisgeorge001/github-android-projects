@@ -18,4 +18,5 @@ public class fragment_registeraccount extends Fragment
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.registerfragment, container, false);
     }
+	//test branch_2
 }
