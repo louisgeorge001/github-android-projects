@@ -155,5 +155,9 @@ public class MainActivity extends AppCompatActivity {
     }
 	
 	//test_branch
+	
+	//Specific pricing and discounts may be subject to change. Please check the Steam store page for details.
+//You're receiving this mail because the item(s) above are on your Steam Wishlist.
+//If you prefer not to receive wishlist notification mails in the future, you can modify your email preferences or unsubscribe.
 
 }
