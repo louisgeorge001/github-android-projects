@@ -95,4 +95,16 @@
         android:layout_alignLeft="@+id/bulogin"
         android:layout_alignStart="@+id/bulogin" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buregister"
+        android:layout_alignEnd="@+id/bulogin"
+        android:layout_alignRight="@+id/bulogin"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toRightOf="@+id/buregister"
+        android:text="View users" />
+
 </RelativeLayout>
