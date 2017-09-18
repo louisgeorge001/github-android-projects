@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-    Button buregister,bulogin;
+    Button buregister,bulogin,buviewusers;
     EditText txtuname,txtpass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                 reg();
             }
         });
+        buviewusers = (Button) findViewById(R.id.buviewusers);
+        buviewusers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listusers();
+            }
+        });
+    }
+    public void listusers()
+    {
+        startActivity(new Intent(this,ListUsers.class));
     }
     public void registerfragment()
     {

@@ -96,7 +96,7 @@
         android:layout_alignStart="@+id/bulogin" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buviewusers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buregister"
