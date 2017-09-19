@@ -142,9 +142,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if(locationlistener.location!=null)
                         {
                             LatLng sydney = new LatLng(locationlistener.location.getLatitude(), locationlistener.location.getLongitude());
-                            mMap.addMarker(new MarkerOptions().position(sydney).
-                                    title("Makati, Metro Manila")
-                                    .snippet("This is where I live").icon(BitmapDescriptorFactory.fromResource(R.drawable.toys)));
+                            mMap.addMarker(new MarkerOptions().position(sydney)
+                                    .title("Makati, Metro Manila")
+                                    .snippet("Mama mo").icon(BitmapDescriptorFactory.fromResource(R.drawable.toys)));
                             mMap.addCircle(new CircleOptions()
                                     .center(sydney)
                                     .radius(20)
